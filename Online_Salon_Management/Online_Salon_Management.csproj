@@ -1,0 +1,319 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A50F5CDE-6317-485B-9AEE-E9CC933A09FD}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Online_Salon_Management</RootNamespace>
+    <AssemblyName>Online_Salon_Management</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controllers\AddAdminController.cs" />
+    <Compile Include="Controllers\AddEmployeeController.cs" />
+    <Compile Include="Controllers\BillController.cs" />
+    <Compile Include="Controllers\BillLineController.cs" />
+    <Compile Include="Controllers\CatalogController.cs" />
+    <Compile Include="Controllers\CustomerController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Models\Admin.cs" />
+    <Compile Include="Models\Admins.cs" />
+    <Compile Include="Models\Bill.cs" />
+    <Compile Include="Models\BillLine.cs" />
+    <Compile Include="Models\BillLines.cs" />
+    <Compile Include="Models\Bills.cs" />
+    <Compile Include="Models\Catalog.cs" />
+    <Compile Include="Models\Catalogs.cs" />
+    <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\CustomerS.cs" />
+    <Compile Include="Models\Database.cs" />
+    <Compile Include="Models\Employee.cs" />
+    <Compile Include="Models\Employees.cs" />
+    <Compile Include="Models\SqlDbDataAccess.cs" />
+    <Compile Include="Models\User.cs" />
+    <Compile Include="Models\Users.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\AdminHomeView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\AdminHomeView.Designer.cs">
+      <DependentUpon>AdminHomeView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ChangePasswordview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\ChangePasswordview.Designer.cs">
+      <DependentUpon>ChangePasswordview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CheckAllBillLineView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\CheckAllBillLineView.Designer.cs">
+      <DependentUpon>CheckAllBillLineView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CheckAllCatalogView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\CheckAllCatalogView.Designer.cs">
+      <DependentUpon>CheckAllCatalogView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CheckAllEmployeeView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\CheckAllEmployeeView.Designer.cs">
+      <DependentUpon>CheckAllEmployeeView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CheckBillEmployeeView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\CheckBillEmployeeView.Designer.cs">
+      <DependentUpon>CheckBillEmployeeView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CheckBillView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\CheckBillView.Designer.cs">
+      <DependentUpon>CheckBillView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CreateBillView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\CreateBillView.Designer.cs">
+      <DependentUpon>CreateBillView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CustomerChangePasswordView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\CustomerChangePasswordView.Designer.cs">
+      <DependentUpon>CustomerChangePasswordView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CustomerHomeview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\CustomerHomeview.Designer.cs">
+      <DependentUpon>CustomerHomeview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CustomerPersonalDetailsView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\CustomerPersonalDetailsView.Designer.cs">
+      <DependentUpon>CustomerPersonalDetailsView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CustomerSeeAllBill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\CustomerSeeAllBill.Designer.cs">
+      <DependentUpon>CustomerSeeAllBill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CustomerSeeAllCatalogView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\CustomerSeeAllCatalogView.Designer.cs">
+      <DependentUpon>CustomerSeeAllCatalogView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\EmployeeChangePasswordView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\EmployeeChangePasswordView.Designer.cs">
+      <DependentUpon>EmployeeChangePasswordView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\EmployeeHomeView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\EmployeeHomeView.Designer.cs">
+      <DependentUpon>EmployeeHomeView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\EmployeePersonalDetailsView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\EmployeePersonalDetailsView.Designer.cs">
+      <DependentUpon>EmployeePersonalDetailsView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ForgetPasswordView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\ForgetPasswordView.Designer.cs">
+      <DependentUpon>ForgetPasswordView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Loginview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Loginview.Designer.cs">
+      <DependentUpon>Loginview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ManageAdminView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\ManageAdminView.Designer.cs">
+      <DependentUpon>ManageAdminView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ManageCatalogView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\ManageCatalogView.Designer.cs">
+      <DependentUpon>ManageCatalogView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ManageCustomerView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\ManageCustomerView.Designer.cs">
+      <DependentUpon>ManageCustomerView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ManageEmployeeView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\ManageEmployeeView.Designer.cs">
+      <DependentUpon>ManageEmployeeView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PersonalDetailsView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\PersonalDetailsView.Designer.cs">
+      <DependentUpon>PersonalDetailsView.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Views\AdminHomeView.resx">
+      <DependentUpon>AdminHomeView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ChangePasswordview.resx">
+      <DependentUpon>ChangePasswordview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\CheckAllBillLineView.resx">
+      <DependentUpon>CheckAllBillLineView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\CheckAllCatalogView.resx">
+      <DependentUpon>CheckAllCatalogView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\CheckAllEmployeeView.resx">
+      <DependentUpon>CheckAllEmployeeView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\CheckBillEmployeeView.resx">
+      <DependentUpon>CheckBillEmployeeView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\CheckBillView.resx">
+      <DependentUpon>CheckBillView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\CreateBillView.resx">
+      <DependentUpon>CreateBillView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\CustomerChangePasswordView.resx">
+      <DependentUpon>CustomerChangePasswordView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\CustomerHomeview.resx">
+      <DependentUpon>CustomerHomeview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\CustomerPersonalDetailsView.resx">
+      <DependentUpon>CustomerPersonalDetailsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\CustomerSeeAllBill.resx">
+      <DependentUpon>CustomerSeeAllBill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\CustomerSeeAllCatalogView.resx">
+      <DependentUpon>CustomerSeeAllCatalogView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\EmployeeChangePasswordView.resx">
+      <DependentUpon>EmployeeChangePasswordView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\EmployeeHomeView.resx">
+      <DependentUpon>EmployeeHomeView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\EmployeePersonalDetailsView.resx">
+      <DependentUpon>EmployeePersonalDetailsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ForgetPasswordView.resx">
+      <DependentUpon>ForgetPasswordView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Loginview.resx">
+      <DependentUpon>Loginview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ManageAdminView.resx">
+      <DependentUpon>ManageAdminView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ManageCatalogView.resx">
+      <DependentUpon>ManageCatalogView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ManageCustomerView.resx">
+      <DependentUpon>ManageCustomerView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ManageEmployeeView.resx">
+      <DependentUpon>ManageEmployeeView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\PersonalDetailsView.resx">
+      <DependentUpon>PersonalDetailsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\project1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\project2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\project21.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
